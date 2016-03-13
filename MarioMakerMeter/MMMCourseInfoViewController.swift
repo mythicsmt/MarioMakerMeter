@@ -8,44 +8,73 @@
 
 import UIKit
 
-class MMMCourseInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var tableCourseList: UITableView!
+class MMMCourseInfoViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     var courseInfoArray: [MMMCourseInfo] = []
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return courseInfoArray.count
-        //        return tupleCourseList.count
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellIdentifier = "Course"
-        let cell = tableCourseList.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! MMMCourseTableViewCell
-        
-        cell.courseTitle.text = courseInfoArray[indexPath.row].courseTitle
-        cell.courseID.text = courseInfoArray[indexPath.row].courseID
-        cell.courseLikes.text = String(courseInfoArray[indexPath.row].courseLikes)
-        cell.coursePlays1.text = String(courseInfoArray[indexPath.row].coursePlays)
-        cell.coursePlays2.text = String(courseInfoArray[indexPath.row].coursePlays)
-        cell.courseClears1.text = String(courseInfoArray[indexPath.row].courseClears)
-        cell.courseClears2.text = String(courseInfoArray[indexPath.row].courseClears)
-        cell.courseAttempts.text = String(courseInfoArray[indexPath.row].courseAttempts)
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return courseInfoArray.count
+    }
+    
+    func loadCellImageFromURL(url: String, inout cell: MMMCourseCollectionViewCell) {
+        if let imageURL = NSURL(string: url) {
+            let task = NSURLSession.sharedSession().dataTaskWithURL(imageURL, completionHandler: {
+                (data: NSData?, response: NSURLResponse?, error: NSError?) in
+                
+                guard let data = data where error == nil else { return }
+                
+                dispatch_async(dispatch_get_main_queue()) {
+                    cell.courseImage.image = UIImage(data: data)
+                }
+            })
+            
+            task.resume()
+        }
+    }
 
-        //cell.courseTitle.text = courseInfoArray[indexPath.row].courseTitle
-        //cell.courseTitle.text = courseInfoArray[indexPath.row].courseTitle
-        //cell.courseTitle.text = courseInfoArray[indexPath.row].courseTitle
-        //cell.courseTitle.text = courseInfoArray[indexPath.row].courseTitle
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cellIdentifier = "Course"
+        var cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath) as! MMMCourseCollectionViewCell
+       
+        let courseInfoElement = courseInfoArray[indexPath.row]
+        
+        cell.courseTitle.text = courseInfoElement.courseTitle
+        cell.courseImage.image = nil
+        
+        loadCellImageFromURL(courseInfoElement.courseImage, cell: &cell)
+        
+        cell.courseID.text = courseInfoElement.courseID
+        cell.courseLikes.text = String(courseInfoElement.courseLikes)
+        cell.coursePlays.text = String(courseInfoElement.coursePlays)
+        cell.courseClears.text = String(courseInfoElement.courseClears)
+        cell.courseAttempts.text = String(courseInfoElement.courseAttempts)
+
+        let rawPopularity = (courseInfoElement.coursePlays == 0 ? 0 : 100 * Double(courseInfoElement.courseLikes) / Double(courseInfoElement.coursePlays))
+        let rawPopularityString = String(format: "%.5f", rawPopularity)
+        cell.coursePopularity.text = rawPopularityString.substringToIndex(rawPopularityString.startIndex.advancedBy(4)) + "%"
         
         
+        let rawClearRate = (courseInfoElement.courseAttempts == 0 ? 0 : 100 * Double(courseInfoElement.courseClears) / Double(courseInfoElement.courseAttempts))
+        let rawClearRateString = String(format: "%.5f", rawClearRate)
+        cell.courseClearRate.text = rawClearRateString.substringToIndex(rawClearRateString.startIndex.advancedBy(4)) + "%"
         
-        
-        
-        //        cell.LevelName.text = tupleCourseList[indexPath.row].0
-        //      loadImageFromURL(tupleCourseList[indexPath.row].1, toCell: cell)
+
+        let rawDifficulty = (courseInfoElement.coursePlays == 0 ? 0 : 100 * Double(courseInfoElement.courseClears) / Double(courseInfoElement.coursePlays))
+        let rawDifficultyString = String(format: "%.5f", rawDifficulty)
+        cell.courseDifficulty.text = rawDifficultyString.substringToIndex(rawDifficultyString.startIndex.advancedBy(4)) + "%"
         
         return cell
     }
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        //
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return collectionView.frame.size
     }
 }
