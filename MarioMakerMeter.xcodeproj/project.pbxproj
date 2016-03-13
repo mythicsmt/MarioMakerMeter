@@ -8,20 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		4648734C1C39C7E100913EE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648734B1C39C7E100913EE5 /* AppDelegate.swift */; };
-		4648734E1C39C7E100913EE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648734D1C39C7E100913EE5 /* ViewController.swift */; };
+		4648734E1C39C7E100913EE5 /* MMMSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648734D1C39C7E100913EE5 /* MMMSearchViewController.swift */; };
 		464873511C39C7E100913EE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4648734F1C39C7E100913EE5 /* Main.storyboard */; };
 		464873531C39C7E100913EE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 464873521C39C7E100913EE5 /* Assets.xcassets */; };
 		464873561C39C7E100913EE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 464873541C39C7E100913EE5 /* LaunchScreen.storyboard */; };
+		467B30661C948A4F00F71096 /* MMMExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467B30651C948A4F00F71096 /* MMMExtensions.swift */; };
+		467B30681C948B1A00F71096 /* MMMOpenAndCloseStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467B30671C948B1A00F71096 /* MMMOpenAndCloseStrings.swift */; };
+		467E78501C4545AC00FA5B4C /* MMMCourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467E784F1C4545AC00FA5B4C /* MMMCourseCollectionViewCell.swift */; };
+		46831F201C7A1FB2005F7E11 /* MMMPageScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46831F1F1C7A1FB2005F7E11 /* MMMPageScraper.swift */; };
+		46B16EBD1C7A3E2E00747494 /* MMMCourseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B16EBC1C7A3E2E00747494 /* MMMCourseInfo.swift */; };
+		46C23A3F1C94F92000615A68 /* Attempts.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C23A3B1C94F92000615A68 /* Attempts.png */; };
+		46C23A401C94F92000615A68 /* Flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C23A3C1C94F92000615A68 /* Flag.png */; };
+		46C23A411C94F92000615A68 /* FootPrints.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C23A3D1C94F92000615A68 /* FootPrints.png */; };
+		46C23A421C94F92000615A68 /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C23A3E1C94F92000615A68 /* Star.png */; };
+		46C23A441C950C6E00615A68 /* Colon.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C23A431C950C6E00615A68 /* Colon.png */; };
+		46CEC8141C8B315300C44167 /* MMMCourseInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CEC8131C8B315300C44167 /* MMMCourseInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		464873481C39C7E000913EE5 /* MarioMakerMeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarioMakerMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4648734B1C39C7E100913EE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4648734D1C39C7E100913EE5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4648734D1C39C7E100913EE5 /* MMMSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMMSearchViewController.swift; sourceTree = "<group>"; };
 		464873501C39C7E100913EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		464873521C39C7E100913EE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		464873551C39C7E100913EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		464873571C39C7E100913EE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		467B30651C948A4F00F71096 /* MMMExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMMExtensions.swift; sourceTree = "<group>"; };
+		467B30671C948B1A00F71096 /* MMMOpenAndCloseStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMMOpenAndCloseStrings.swift; sourceTree = "<group>"; };
+		467E784F1C4545AC00FA5B4C /* MMMCourseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMMCourseCollectionViewCell.swift; sourceTree = "<group>"; };
+		46831F1F1C7A1FB2005F7E11 /* MMMPageScraper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMMPageScraper.swift; sourceTree = "<group>"; };
+		46B16EBC1C7A3E2E00747494 /* MMMCourseInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMMCourseInfo.swift; sourceTree = "<group>"; };
+		46C23A3B1C94F92000615A68 /* Attempts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Attempts.png; path = ../../../Dropbox/MMMIcons/Attempts.png; sourceTree = "<group>"; };
+		46C23A3C1C94F92000615A68 /* Flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Flag.png; path = ../../../Dropbox/MMMIcons/Flag.png; sourceTree = "<group>"; };
+		46C23A3D1C94F92000615A68 /* FootPrints.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FootPrints.png; path = ../../../Dropbox/MMMIcons/FootPrints.png; sourceTree = "<group>"; };
+		46C23A3E1C94F92000615A68 /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Star.png; path = ../../../Dropbox/MMMIcons/Star.png; sourceTree = "<group>"; };
+		46C23A431C950C6E00615A68 /* Colon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Colon.png; path = ../../../Dropbox/MMMIcons/Colon.png; sourceTree = "<group>"; };
+		46CEC8131C8B315300C44167 /* MMMCourseInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMMCourseInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +76,57 @@
 		4648734A1C39C7E000913EE5 /* MarioMakerMeter */ = {
 			isa = PBXGroup;
 			children = (
-				4648734B1C39C7E100913EE5 /* AppDelegate.swift */,
-				4648734D1C39C7E100913EE5 /* ViewController.swift */,
-				4648734F1C39C7E100913EE5 /* Main.storyboard */,
+				467B306B1C948C0500F71096 /* Controller */,
+				467B306A1C948BFE00F71096 /* View */,
+				467B306C1C948C1A00F71096 /* Model */,
 				464873521C39C7E100913EE5 /* Assets.xcassets */,
-				464873541C39C7E100913EE5 /* LaunchScreen.storyboard */,
+				4648734B1C39C7E100913EE5 /* AppDelegate.swift */,
 				464873571C39C7E100913EE5 /* Info.plist */,
 			);
 			path = MarioMakerMeter;
+			sourceTree = "<group>";
+		};
+		467B30691C948B5200F71096 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				46C23A431C950C6E00615A68 /* Colon.png */,
+				46C23A3B1C94F92000615A68 /* Attempts.png */,
+				46C23A3C1C94F92000615A68 /* Flag.png */,
+				46C23A3D1C94F92000615A68 /* FootPrints.png */,
+				46C23A3E1C94F92000615A68 /* Star.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		467B306A1C948BFE00F71096 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4648734F1C39C7E100913EE5 /* Main.storyboard */,
+				464873541C39C7E100913EE5 /* LaunchScreen.storyboard */,
+				467E784F1C4545AC00FA5B4C /* MMMCourseCollectionViewCell.swift */,
+				467B30691C948B5200F71096 /* Images */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		467B306B1C948C0500F71096 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4648734D1C39C7E100913EE5 /* MMMSearchViewController.swift */,
+				46CEC8131C8B315300C44167 /* MMMCourseInfoViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		467B306C1C948C1A00F71096 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				46831F1F1C7A1FB2005F7E11 /* MMMPageScraper.swift */,
+				467B30671C948B1A00F71096 /* MMMOpenAndCloseStrings.swift */,
+				467B30651C948A4F00F71096 /* MMMExtensions.swift */,
+				46B16EBC1C7A3E2E00747494 /* MMMCourseInfo.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +161,7 @@
 				TargetAttributes = {
 					464873471C39C7E000913EE5 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 5APADPUG2B;
 					};
 				};
 			};
@@ -123,8 +189,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				464873561C39C7E100913EE5 /* LaunchScreen.storyboard in Resources */,
+				46C23A421C94F92000615A68 /* Star.png in Resources */,
+				46C23A3F1C94F92000615A68 /* Attempts.png in Resources */,
+				46C23A401C94F92000615A68 /* Flag.png in Resources */,
 				464873531C39C7E100913EE5 /* Assets.xcassets in Resources */,
 				464873511C39C7E100913EE5 /* Main.storyboard in Resources */,
+				46C23A411C94F92000615A68 /* FootPrints.png in Resources */,
+				46C23A441C950C6E00615A68 /* Colon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +206,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4648734E1C39C7E100913EE5 /* ViewController.swift in Sources */,
+				46CEC8141C8B315300C44167 /* MMMCourseInfoViewController.swift in Sources */,
+				4648734E1C39C7E100913EE5 /* MMMSearchViewController.swift in Sources */,
 				4648734C1C39C7E100913EE5 /* AppDelegate.swift in Sources */,
+				467B30681C948B1A00F71096 /* MMMOpenAndCloseStrings.swift in Sources */,
+				467E78501C4545AC00FA5B4C /* MMMCourseCollectionViewCell.swift in Sources */,
+				467B30661C948A4F00F71096 /* MMMExtensions.swift in Sources */,
+				46B16EBD1C7A3E2E00747494 /* MMMCourseInfo.swift in Sources */,
+				46831F201C7A1FB2005F7E11 /* MMMPageScraper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +326,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MarioMakerMeter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.newgnome.MarioMakerMeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -260,10 +342,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MarioMakerMeter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.newgnome.MarioMakerMeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -286,6 +373,7 @@
 				4648735C1C39C7E100913EE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
